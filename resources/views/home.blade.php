@@ -7,7 +7,36 @@
   <title>Document</title>
 </head>
 <body>
-      <h1> Testing 123</h1>
+
+    @auth
+
+{{-- if u are logged in --}}
+     <p>Congrats you are logged in</p>
+
+
+    @else
+
+         <div  style="border: 3px solid black;">
+        <h2>Register</h2>
+        <form action= "/register"  method = 'POST' >
+             @csrf
+            <input name="name" type="text" placeholder = "name">
+            <input name="email" type="email" placeholder = "email">
+            <input name="password" type="password" placeholder = "password">
+
+            <button> Register</button>
+     </form>
+
+
+      </div>
+
+    @endauth
+
+
+
+
+
+
 </body>
 </html>
 

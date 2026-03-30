@@ -40,8 +40,6 @@ echo "Connected successfully"; -->
 
 
 
-
-
 <!-- connecting using PDO -->
 
 <!--
@@ -59,7 +57,7 @@ echo "Connected successfully";
 }
      catch (PDOException $e) {
 echo "Connection failed: " . $e->getMessage();
-} -->
+}
 
 
 
@@ -106,5 +104,11 @@ echo "Connection failed: " . $e->getMessage();
 // } else {
 //     echo "Error creating database: " . mysqli_error($conn);
 // }
+
+
+-->
+
+
+<!-- Crud Operation -->
 
 

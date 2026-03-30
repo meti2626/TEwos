@@ -12,7 +12,9 @@
 
 {{-- if u are logged in --}}
      <p>Congrats you are logged in</p>
-
+        <form action="/logout" method="POST">
+            @csrf
+            <button>Logout</button>
 
     @else
 
@@ -31,9 +33,6 @@
       </div>
 
     @endauth
-
-
-
 
 
 

@@ -1,14 +1,30 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet , Navigate} from 'react-router-dom'
+import {useStateContext}  from "../context/ContextProvider.jsx";
+
+
 
 export default function GuestLayout() {
+
+  const {token} = useStateContext()
+
+  if (token)
+  {
+    return <Navigate to = "/" />
+  }
+
+
   return (
-    <div>
-{/* //rendering child routes */}
 
-    <Outlet />
+    <div  className='login-signup-form animated fadeInDown'>
 
+    <div className='form'>
+
+       <Outlet />
 
     </div>
+</div>
+
+
   )
 }
